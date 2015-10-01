@@ -7,9 +7,7 @@ def nyc_pigeon_organizer(data)
   data.each do |pigeon_data, attributes_hash|
     attributes_hash.each do |pigeon_attributes, name_array|
       name_array.each {|name| pigeon_hash[name] = {}} #hash keys have to be unique
-      
-        pigeon_hash[name] = {} 
-        pigeon_hash[name][pigeon_data] = []
+        pigeon_hash[name].store([pigeon_data],[])
         #lookup store method
 
         
